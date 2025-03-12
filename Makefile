@@ -3,7 +3,7 @@ DOCX=output.docx
 ODT=output.odt
 MD=*.md
 METADATA=metadata.yaml
-PANDOC_ENGINE=xelatex
+PANDOC_ENGINE=lualatex
 FILTERS=--filter pandoc-crossref --citeproc
 HIGHLIGHT=tango
 
@@ -19,4 +19,4 @@ $(ODT): $(wildcard $(MD)) $(METADATA)
 	pandoc $(wildcard $(MD)) -o $(ODT) $(FILTERS) --highlight-style=$(HIGHLIGHT) --metadata-file=$(METADATA)
 
 clean:
-	rm -f $(PDF)
+	rm -f $(PDF) $(DOCX) $(ODT)

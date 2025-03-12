@@ -24,6 +24,12 @@ header-includes:
   - \usepackage{amsmath}
   - \usepackage{graphicx}
   - \usepackage{hyperref}
+  - \usepackage{fontspec}
+  - \setmainfont{STIX Two Text}
+  - \setsansfont{IBM Plex Sans}
+  # - \setmainfont{Times New Roman}
+  # - \setsansfont{Arial}
+  - \setmonofont{JetBrains Mono}
 toc: true
 lot: true
 lof: true
