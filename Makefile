@@ -3,7 +3,7 @@ DOCX=output.docx
 ODT=output.odt
 MD=*.md
 METADATA=metadata.yaml
-PANDOC_ENGINE=lualatex
+PANDOC_ENGINE=pdflatex
 FILTERS=--filter pandoc-crossref --citeproc
 HIGHLIGHT=tango
 
