@@ -31,13 +31,7 @@ greet()
 
 Here is a `cpp` codeblock with line numbers starting from 10.
 
-```{.cpp .numberLines startFrom="10"}
-auto main() -> int {
-  int m = 1;
-  m == 1 ? std::cout << "yes\n" : std::cout << "no\n";
-  std::cout << "hello";
-  return 0;
-}
+```{#lst:cppcode .cpp caption="Cpp Program" .numberLines startFrom="10" include=main.cpp}
 ```
 
 ---

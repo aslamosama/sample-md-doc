@@ -30,4 +30,8 @@ The derivative of a function is defined as:
 
 $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$${#eq:limit}
 
+$$
+\frac{3}{2}
+$$ {#eq:label}
+
 ---

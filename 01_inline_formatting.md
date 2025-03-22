@@ -10,6 +10,8 @@ Pandoc Markdown supports the following _inline formatting_.
 - **Inline code:** `hello world`
 - **Strikethrough:** ~~strikethrough text~~
 
+---
+
 ## Sample Text
 
 The **deep ocean** remains one of the least explored places on Earth, covering

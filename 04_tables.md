@@ -15,7 +15,7 @@ Table: Efficiency of Energy Sources {#tbl:energy-efficiency}
 |     Nuclear     |          90-95 |        0.04 - 0.07 |               10 |
 
 Here is another example table that shows some Pandoc formatting features. See
-Table {@tbl:features}
+@tbl:features
 
 Table: Pandoc Features {#tbl:features}
 

@@ -9,7 +9,7 @@ abstract: |
   focusing on pdf generation through LaTeX.
 # documentclass: article
 # documentclass: report
-# documentclass: scratcl
+# documentclass: scrartcl
 documentclass: scrreprt
 # documentclass: amsart
 # documentclass: paper

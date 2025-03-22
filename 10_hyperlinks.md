@@ -1,4 +1,4 @@
-## Hyperlinks
+## Hyperlinks {#sec:hyperlinks}
 
 - **Website:** [Pandoc’s documentation](https://pandoc.org)
 - **Simple:** <https://google.com>

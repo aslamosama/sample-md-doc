@@ -1,22 +1,14 @@
 PDF=output.pdf
-DOCX=output.docx
-ODT=output.odt
-MD=*.md
+MD=$(wildcard *.md)
 METADATA=metadata.yaml
 PANDOC_ENGINE=pdflatex
-FILTERS=--filter pandoc-crossref --citeproc
-HIGHLIGHT=tango
+FILTERS=--filter pandoc-crossref --filter pandoc-include-code --citeproc
+HIGHLIGHT=kate
 
-all: $(PDF) $(DOCX) $(ODT)
+all: $(PDF)
 
-$(PDF): $(wildcard $(MD)) $(METADATA)
-	pandoc $(wildcard $(MD)) -o $(PDF) --pdf-engine=$(PANDOC_ENGINE) $(FILTERS) --highlight-style=$(HIGHLIGHT) --metadata-file=$(METADATA)
-
-$(DOCX): $(wildcard $(MD)) $(METADATA)
-	pandoc $(wildcard $(MD)) -o $(DOCX) $(FILTERS) --highlight-style=$(HIGHLIGHT) --metadata-file=$(METADATA)
-
-$(ODT): $(wildcard $(MD)) $(METADATA)
-	pandoc $(wildcard $(MD)) -o $(ODT) $(FILTERS) --highlight-style=$(HIGHLIGHT) --metadata-file=$(METADATA)
+$(PDF): $(MD) $(METADATA)
+	pandoc $(MD) -o $(PDF) --pdf-engine=$(PANDOC_ENGINE) $(FILTERS) --highlight-style=$(HIGHLIGHT) --metadata-file=$(METADATA)
 
 clean:
-	rm -f $(PDF) $(DOCX) $(ODT)
+	rm -f $(PDF) *.aux *.log *.out
