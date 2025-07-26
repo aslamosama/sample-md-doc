@@ -2,7 +2,7 @@ PDF=output.pdf
 MD=$(wildcard *.md)
 METADATA=metadata.yaml
 PANDOC_ENGINE=pdflatex
-FILTERS=--filter pandoc-crossref --filter pandoc-include-code --citeproc
+FILTERS=--filter pandoc-crossref --filter pandoc-include --citeproc
 HIGHLIGHT=kate
 
 all: $(PDF)

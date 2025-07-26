@@ -2,5 +2,5 @@ Dependencies:
 
 - pandoc
 - pandoc-crossref
-- pandoc-include-code
+- pandoc-include
 - texlive

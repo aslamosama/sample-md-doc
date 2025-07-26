@@ -31,7 +31,8 @@ greet()
 
 Here is a `cpp` codeblock with line numbers starting from 10.
 
-```{#lst:cppcode .cpp caption="Cpp Program" .numberLines startFrom="10" include=main.cpp}
+```{#lst:cppcode .cpp caption="Cpp Program" .numberLines startFrom="10"}
+!include "main.cpp"
 ```
 
 ---
