@@ -1,33 +1,73 @@
-title: "Markdown Sample Document"
-thanks: "Thanks All Lorem ipsum dolor sit amet"
-author:
-  - "John Doe, Department of Pandoc, University of Example"
-  - "Jane Smith, School of Markdown, Example Institute"
-date: "2025-02-21"
+# title: "Markdown Sample Document"
+# thanks: "Thanks All Lorem ipsum dolor sit amet"
+# author:
+  # - "John Doe, Department of Pandoc, University of Example"
+  # - "Jane Smith, School of Markdown, Example Institute"
+# date: "2025-02-21"
 abstract: |
   This paper explores the role of pandoc in writing,
   focusing on pdf generation through LaTeX.
 # documentclass: article
 # documentclass: report
-# documentclass: scrartcl
-documentclass: scrreprt
+documentclass: scrartcl
+# documentclass: scrreprt
 # documentclass: amsart
 # documentclass: paper
 # fontsize: 12pt
-geometry: a4paper, margin=1in
+# geometry: a4paper, margin=1in
+geometry: a4paper
 bibliography: references.bib
 csl: "csl/ieee.csl"
 figPrefix: "Figure"
 tblPrefix: "Table"
 eqnPrefix: "Equation"
 header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{STIX Two Text}
+  - \setsansfont{IBM Plex Sans}
+  - \setmonofont{CaskaydiaCove NF}
+
   - \usepackage{amsmath}
   - \usepackage{graphicx}
   - \usepackage{hyperref}
-  - \renewcommand{\rmdefault}{stix}
-  # - \renewcommand{\rmdefault}{ptm}
-  - \renewcommand{\sfdefault}{phv}
-  - \renewcommand{\ttdefault}{lmtt}
+
+  - \usepackage{fancyhdr}
+  - \pagestyle{fancy}
+  - \fancyhead{}
+  - \fancyhead[L]{Text Left}
+  - \fancyhead[R]{Text Right}
+
+  - \newcommand{\customtitle}{
+      \begin{titlepage}
+        \centering
+        \vspace*{1cm}
+        {\Huge\bfseries Multiline Title of the\\Document\par}
+        \vspace{0.5cm}
+        {\LARGE\itshape Document Subtitle\par}
+        \vspace{1cm}
+        \includegraphics[width=0.3\textwidth]{logo.pdf}\par
+        \vspace{1cm}
+        {\large Multiline Name of\\Department\par}
+        \vspace{0.5cm}
+        \vfill
+        {\large\textbf{Authors}\par}
+        \vspace{0.2cm}
+        \begin{large}
+        \begin{tabular}{rl}
+        00000000 & Dohn Doe \\
+        00000000 & Jane Smith \\
+        \end{tabular}
+        \end{large}
+        \vfill
+        {\large\textbf{Supervisors}\par}
+        \vspace{0.2cm}
+        {Supervisors Name1\par}
+        {Supervisors Name2\par}
+        \vspace{1cm}
+        {\large\today\par}
+      \end{titlepage}
+    }
+  - \AtBeginDocument{\customtitle}
 toc: true
 lot: true
 lof: true

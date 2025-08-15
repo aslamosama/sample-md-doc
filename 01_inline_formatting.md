@@ -1,3 +1,5 @@
+\newpage
+
 # Inline Formatting
 
 Pandoc Markdown supports the following _inline formatting_.

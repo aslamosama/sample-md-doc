@@ -1,9 +1,9 @@
 PDF=output.pdf
 MD=$(wildcard *.md)
 METADATA=metadata.yaml
-PANDOC_ENGINE=pdflatex
+PANDOC_ENGINE=xelatex
 FILTERS=--filter pandoc-crossref --filter pandoc-include --citeproc
-HIGHLIGHT=kate
+HIGHLIGHT=tango
 
 all: $(PDF)
 

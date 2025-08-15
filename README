@@ -4,3 +4,9 @@ Dependencies:
 - pandoc-crossref
 - pandoc-include
 - texlive
+
+Fonts used by fontspec:
+
+- STIX Two Text
+- IBM Plex Sans
+- CaskaydiaCove NF
